@@ -1,0 +1,81 @@
+*, :after{
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #4d4d4d;
+}
+
+header{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.todolist{
+    width: 80%;
+    background-color: white;
+    border: solid 1.5pt #ededed;
+}
+
+h1{
+    font-size: 6.25rem;
+    font-weight: lighter;
+    color: #af2f2f;
+    margin: 0;
+}
+
+.input{
+    height: 3em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.list-item{
+    height: 3em;
+    display: flex;
+    align-items: center;
+    border-top: solid 1pt #ededed;
+}
+
+.check, .delete{
+    width: 15%;
+}
+
+.item-name{
+    flex-grow: 2;
+}
+
+.counter{
+    height: 2em;
+    border-top: solid 1pt #ededed;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.counter p {
+    font-size: 0.8em;
+}
+
+.stapeleffekt{
+    display: flex;
+    align-items: center;
+}
+
+.stapel1{
+    width: 78%;
+    height: 10px;
+    background-color: pink;
+    border: solid 0 1.5pt 1.5pt 1.5pt #ededed;
+}
