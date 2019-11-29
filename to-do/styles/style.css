@@ -18,7 +18,8 @@ header{
 
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .todolist{
@@ -68,14 +69,21 @@ h1{
     font-size: 0.8em;
 }
 
-.stapeleffekt{
-    display: flex;
-    align-items: center;
-}
 
 .stapel1{
+    display: inline-block;
+    width: 79%;
+    height: 5px;
+    background-color: white;
+    border: solid 1.5pt #ededed;
+    border-top: none;
+}
+
+.stapel2{
+    display: inline-block;
     width: 78%;
-    height: 10px;
-    background-color: pink;
-    border: solid 0 1.5pt 1.5pt 1.5pt #ededed;
+    height: 5px;
+    background-color: white;
+    border: solid 1.5pt #ededed;
+    border-top: none;
 }
