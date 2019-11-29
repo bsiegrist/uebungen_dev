@@ -36,23 +36,37 @@ h1{
     margin: 0;
 }
 
-.input{
-    height: 3em;
+.arrow{
+    width: 10%;
+    padding: 10px;
+}
+
+.input-line{
     display: flex;
     align-items: center;
-    padding: 10px;
     border: none;
 }
 
+form{
+    width: 100%;
+}
+
+input{
+    border: none;
+    height: 4rem;
+    width: 100%;
+}
+
 .list-item{
-    height: 3em;
+    height: 4rem;
     display: flex;
     align-items: center;
     border-top: solid 1pt #ededed;
 }
 
-.check, .delete{
-    width: 15%;
+.check, .delete {
+    width: 10%;
+    padding: 10px;
 }
 
 .item-name{
@@ -60,7 +74,7 @@ h1{
 }
 
 .counter{
-    height: 2em;
+    height: 3rem;
     border-top: solid 1pt #ededed;
     display: flex;
     align-items: center;
