@@ -26,7 +26,8 @@ main{
 .todolist{
     width: 80%;
     background-color: white;
-    border: solid 1.5pt #ededed;
+    border: solid 0.5pt #ededed;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 10%);
 }
 
 h1{
@@ -55,6 +56,12 @@ input{
     border: none;
     height: 4rem;
     width: 100%;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .list-item{
@@ -86,20 +93,20 @@ input{
 }
 
 
-.stapel1{
+.effekt{
     display: inline-block;
-    width: 79%;
-    height: 5px;
+    height: 7px;
     background-color: white;
-    border: solid 1.5pt #ededed;
+    border: solid 0.5pt #ededed;
     border-top: none;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 10%);
+}
+
+.stapel1{
+    width: 79%;
+
 }
 
 .stapel2{
-    display: inline-block;
     width: 78%;
-    height: 5px;
-    background-color: white;
-    border: solid 1.5pt #ededed;
-    border-top: none;
 }
