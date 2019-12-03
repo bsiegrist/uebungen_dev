@@ -38,8 +38,10 @@ h1{
 }
 
 .arrow{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 10%;
-    padding: 10px;
 }
 
 .input-line{
@@ -48,8 +50,13 @@ h1{
     border: none;
 }
 
-form{
-    width: 100%;
+.textfeld{
+    width: 90%;
+}
+
+input::placeholder{
+    font-style: oblique;
+    color: #ededed;
 }
 
 input{
@@ -72,8 +79,19 @@ ul{
 }
 
 .check, .delete {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 10%;
     padding: 10px;
+}
+
+.delete{
+    visibility: hidden;
+}
+
+.list-item:hover .delete{
+    visibility: visible;
 }
 
 .item-name{
