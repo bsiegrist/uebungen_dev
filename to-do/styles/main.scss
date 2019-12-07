@@ -27,7 +27,7 @@ main{
     align-items: center;
 }
 
-.todolist{
+.paper{
     width: 80%;
     background-color: white;
     border: solid 0.5pt $grey-light;
@@ -41,21 +41,27 @@ h1{
     margin: 0;
 }
 
-.arrow{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-}
 
-.input-line{
+
+
+/*------Inputfeld------*/
+
+
+.input{
     display: flex;
     align-items: center;
     border: none;
-}
 
-.textfeld{
-    width: 90%;
+    &__arrow{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+    }
+
+    &__textbox{
+        width: 90%;
+    }
 }
 
 input::placeholder{
@@ -69,38 +75,17 @@ input{
     width: 100%;
 }
 
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
-.list-item{
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    border-top: solid 1pt $grey-light;
-}
 
-.check, .delete {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    padding: 10px;
-}
 
-.delete{
-    visibility: hidden;
-}
+/*------Liste------*/
 
-.list-item:hover .delete{
-    visibility: visible;
-}
+@import "list";
 
-.item-name{
-    flex-grow: 2;
-}
+
+
+
+/*------Counter------*/
 
 .counter{
     height: 3rem;
@@ -114,6 +99,9 @@ ul{
     font-size: 1rem;
 }
 
+
+
+/*------Stapeleffekt------*/
 
 .effekt{
     display: inline-block;
@@ -132,6 +120,8 @@ ul{
 .stapel2{
     width: 78%;
 }
+
+
 
 /*------Erledigt------*/
 

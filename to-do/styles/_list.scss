@@ -1,0 +1,37 @@
+
+.list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__item{
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        border-top: solid 1pt $grey-light;
+    }
+
+    &__delete{
+        visibility: hidden;
+    }
+
+    &__checkbox, &__delete{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        padding: 10px;
+    }
+
+    &__item-name{
+        flex-grow: 2;
+    }
+
+    &__item:hover &__delete{
+        visibility: visible;
+    }
+    
+}
+
+
+
