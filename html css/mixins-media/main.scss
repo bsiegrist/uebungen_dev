@@ -1,0 +1,26 @@
+@mixin media($media) {
+    @if $media == 'tablet' {
+        @media (min-width: 768px){
+            @content;
+        }
+    }
+    @if $media == 'desktop' {
+        @media (min-width: 1024px){
+            @content;
+        }
+    }
+}
+
+h1{
+    color:blue;
+
+    @include media('tablet') {
+        // Styles für Tablet kommen hier rein
+        color: red;
+    }
+      
+    @include media('desktop') {
+        // Styles für Desktop kommen hier rein
+        color: yellow;
+    }
+}
