@@ -8,9 +8,14 @@ body{
     color: $dark;
     height: 100vh;
     background-color: $lightest;
-    background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+    background-image: url('../images/bg-top.svg');
     background-repeat: no-repeat;
-    background-position: top right, bottom left;
+    background-position: top right;
+
+    @include desktop{
+        background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+        background-position: top right, bottom left;
+    }
 }
 
 ul{
