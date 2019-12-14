@@ -4,4 +4,15 @@
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto 50px auto;
+}
+
+.offer__btn{
+    color: white;
+    letter-spacing: 0.15em;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
