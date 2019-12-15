@@ -4,15 +4,28 @@
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     margin: 0 auto 50px auto;
 }
 
+.offer__price--month{
+    color: $dark;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.price{
+    font-size: 4rem;
+}
+
 .offer__btn{
+    font-size: 0.8rem;
     color: white;
     letter-spacing: 0.15em;
     width: 100%;
     padding: 10px;
+    margin-top: 20px;
     border-radius: 5px;
-    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    background-image: linear-gradient(to right, $light-purple, $dark-purple);
 }
+
