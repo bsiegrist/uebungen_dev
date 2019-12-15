@@ -2,7 +2,6 @@
 @import "partials/mixins";
 @import "partials/variables";
 
-
 html{
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -34,13 +33,13 @@ h1{
     font-size: 2rem;
 }
 
-h2{
-    font-size: 1.2rem;
-    margin: 0;
-}
-
 @import "partials/header";
 @import "partials/offer";
+
+.font-white{
+    color: white;
+}
+
 
 /* Attribution */
 .attribution { 

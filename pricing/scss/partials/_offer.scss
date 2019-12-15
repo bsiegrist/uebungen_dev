@@ -7,6 +7,11 @@
     padding: 2rem;
     margin: 0 auto 2rem auto;
     
+    &__title{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
     &__price{
         display: flex;
         align-items: center;
@@ -16,7 +21,7 @@
         margin: 2rem 0;
     }
     
-    &__highlights li{
+    &__highlights>li{
         border-top: 1pt solid lightgrey;
         padding: 1rem 0;
     }
@@ -35,11 +40,30 @@
         border-radius: 5px;
         border: 1px solid transparent;
         background-image: linear-gradient(to right, $light-purple, $dark-purple);
+
+        &:hover, &:active{
+            color: $dark-purple;
+            background-image: none;
+            border: 1px solid $dark-purple;
+        }
+
+        &--negative{
+            background-image: none;
+            background-color: white;
+            color: $dark-purple;
+
+            &:hover, &:active{
+                color: white;
+                background-color: transparent;
+                border: 1px solid white;
+            }
+        }
     }
-    &__btn:hover{
-        color: $dark-purple;
-        background-image: none;
-        border: 1px solid $dark-purple;
+
+
+    &--negative{
+        background-image: linear-gradient(to bottom, $light-purple, $dark-purple);
+
     }
 }
 

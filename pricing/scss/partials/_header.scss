@@ -17,6 +17,11 @@
     width: 3.5rem;
     background-image: linear-gradient(to right, $light-purple, $dark-purple);
     border-radius: 1rem;
+
+    &:hover, &:active{
+        background-image: none;
+        background-color: $light-purple;
+    }
   }
 
   .checkbox input {
@@ -31,7 +36,7 @@
     height: 1.5rem;
     background-color: $lightest;
     border-radius: 50%;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
     margin-left: 0;
   }
 
