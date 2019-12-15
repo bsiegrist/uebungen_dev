@@ -15,7 +15,7 @@ body{
     background-color: $lightest;
     background-image: url('../images/bg-top.svg');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top right;
 
     @include desktop{
         background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
@@ -43,7 +43,9 @@ h2{
 /* Attribution */
 .attribution { 
     font-size: 11px; 
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 30px; 
+}
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
