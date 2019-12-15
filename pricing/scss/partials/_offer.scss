@@ -6,26 +6,39 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     padding: 30px;
     margin: 0 auto 50px auto;
-}
+    
+    &__price--month{
+        color: $dark;
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+    
+    &__highlights li{
+        border-top: 1pt solid lightgrey;
+        padding: 15px 0;
+    }
 
-.offer__price--month{
-    color: $dark;
-    font-size: 2rem;
-    margin: 20px 0;
+    &__highlights li:last-of-type{
+        border-bottom: 1pt solid lightgrey;
+    }
+    
+    &__btn{
+        font-size: 0.8rem;
+        color: white;
+        letter-spacing: 0.15em;
+        width: 100%;
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, $light-purple, $dark-purple);
+    }
 }
 
 .price{
     font-size: 4rem;
 }
 
-.offer__btn{
-    font-size: 0.8rem;
-    color: white;
-    letter-spacing: 0.15em;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, $light-purple, $dark-purple);
-}
+
+
+
 
