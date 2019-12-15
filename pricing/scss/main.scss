@@ -16,7 +16,7 @@ body{
     background-color: $lightest;
     background-image: url('../images/bg-top.svg');
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: 12rem -2rem;
 
     @include desktop{
         background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');

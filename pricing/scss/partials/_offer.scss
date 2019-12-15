@@ -7,7 +7,10 @@
     padding: 2rem;
     margin: 0 auto 2rem auto;
     
-    &__price--month{
+    &__price{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: $dark;
         font-size: 2rem;
         margin: 2rem 0;
@@ -42,6 +45,7 @@
 
 .price{
     font-size: 4rem;
+    margin: 0 5px;
 }
 
 
