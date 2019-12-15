@@ -1,0 +1,40 @@
+.toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.pricing-model{
+    color: $light;
+}
+
+.checkbox {
+    display: block;
+    margin: 0 1.5rem;
+    position: relative;
+    height: 2rem;
+    width: 3.5rem;
+    background-image: linear-gradient(to right, $light-purple, $dark-purple);
+    border-radius: 1rem;
+  }
+
+  .checkbox input {
+    display: none;
+  }
+
+  .lever {
+    position: absolute;
+    left: 0.27rem;
+    top: 0.27rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $lightest;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+    margin-left: 0;
+  }
+
+  .checkbox input:checked + .lever{
+    margin-left: 1.4rem; 
+  }

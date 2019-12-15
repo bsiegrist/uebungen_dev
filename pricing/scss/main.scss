@@ -12,6 +12,7 @@ html{
 body{
     color: $grey;
     height: 100vh;
+    padding: 3rem 0;
     background-color: $lightest;
     background-image: url('../images/bg-top.svg');
     background-repeat: no-repeat;
@@ -38,13 +39,14 @@ h2{
     margin: 0;
 }
 
+@import "partials/header";
 @import "partials/offer";
 
 /* Attribution */
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    padding-bottom: 30px; 
+    padding-bottom: 2rem;
 }
 
 .attribution a { 
