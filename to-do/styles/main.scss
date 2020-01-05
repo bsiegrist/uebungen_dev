@@ -58,18 +58,7 @@ h1{
 
 /*------Counter------*/
 
-.counter{
-    height: 3rem;
-    border-top: solid 1pt $grey-light;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.counter p {
-    font-size: 1rem;
-}
-
+@import "partials/counter";
 
 
 /*------Stapeleffekt------*/
@@ -91,3 +80,4 @@ h1{
 .stapel2{
     width: 78%;
 }
+
