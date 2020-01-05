@@ -54,7 +54,7 @@
         border: 1px solid transparent;
         background-image: linear-gradient(to right, $light-purple, $dark-purple);
 
-        &:hover, &:active{
+        &:hover{
             color: $dark-purple;
             background-image: none;
             border: 1px solid $dark-purple;
@@ -65,7 +65,7 @@
             background-color: white;
             color: $dark-purple;
 
-            &:hover, &:active{
+            &:hover{
                 color: white;
                 background-color: transparent;
                 border: 1px solid white;
@@ -73,6 +73,11 @@
         }
     }
 
+    &--left{
+        @include desktop{
+            border-radius: 10px 0 0 10px;
+        }
+    }
 
     &--negative{
         background-image: linear-gradient(to bottom, $light-purple, $dark-purple);
@@ -80,7 +85,12 @@
         @include desktop{
             padding: 4rem 2rem;
         }
+    }
 
+    &--right{
+        @include desktop{
+            border-radius: 0 10px 10px 0;
+        }
     }
 }
 
