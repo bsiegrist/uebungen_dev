@@ -46,42 +46,13 @@ h1{
 
 /*------Inputfeld------*/
 
-
-.input{
-    display: flex;
-    align-items: center;
-    border: none;
-
-    &__arrow{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        width: 10%;
-    }
-
-    &__textbox{
-        width: 90%;
-    }
-}
-
-input::placeholder{
-    font-style: oblique;
-    color: $grey-light;
-}
-
-input{
-    border: none;
-    height: 4rem;
-    width: 100%;
-}
-
+@import "partials/input";
 
 
 
 /*------Liste------*/
 
 @import "partials/list";
-
 
 
 
