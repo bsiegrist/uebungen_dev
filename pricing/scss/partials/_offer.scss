@@ -1,3 +1,11 @@
+.pricing-models{
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .offer{
     background-color: white;
     width: 90%;
@@ -6,6 +14,11 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin: 0 auto 2rem auto;
+
+    @include desktop{
+        width: 25%;
+        margin: 0 0 2rem 0;
+    }
     
     &__title{
         font-size: 1.2rem;
@@ -63,6 +76,10 @@
 
     &--negative{
         background-image: linear-gradient(to bottom, $light-purple, $dark-purple);
+
+        @include desktop{
+            padding: 4rem 2rem;
+        }
 
     }
 }
