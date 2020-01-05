@@ -9,6 +9,11 @@
         display: flex;
         align-items: center;
         border-top: solid 1pt $grey-light;
+
+        &--done{
+            text-decoration: line-through;
+            color: $grey-light;
+        }
     }
 
     &__delete{
