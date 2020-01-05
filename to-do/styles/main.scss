@@ -1,5 +1,5 @@
-@import "normalize";
-@import "variables";
+@import "partials/normalize";
+@import "partials/variables";
 
 
 *, :after{
@@ -80,7 +80,7 @@ input{
 
 /*------Liste------*/
 
-@import "list";
+@import "partials/list";
 
 
 
