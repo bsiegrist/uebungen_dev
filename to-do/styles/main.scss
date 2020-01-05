@@ -3,7 +3,7 @@
 
 
 *, :after{
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -30,7 +30,7 @@ main{
 .paper{
     width: 80%;
     background-color: white;
-    border: solid 0.5pt $grey-light;
+    border: solid 1px $grey-light;
     box-shadow: 0px 3px 10px lightgray;
 }
 
@@ -67,7 +67,7 @@ h1{
     display: inline-block;
     height: 7px;
     background-color: white;
-    border: solid 0.5pt $grey-light;
+    border: solid 1px $grey-light;
     border-top: none;
     box-shadow: 0px 3px 10px lightgray;
 }
@@ -80,4 +80,3 @@ h1{
 .stapel2{
     width: 78%;
 }
-
