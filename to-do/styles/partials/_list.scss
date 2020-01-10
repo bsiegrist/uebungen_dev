@@ -16,10 +16,6 @@
         }
     }
 
-    &__delete{
-        visibility: hidden;
-    }
-
     &__checkbox, 
     &__delete{
         display: flex;
@@ -29,8 +25,21 @@
         padding: 10px;
     }
 
+    &__checkmark{
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-image: url(../img/unchecked.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
     &__item-name{
         flex-grow: 2;
+    }
+
+    &__delete{
+        visibility: hidden;
     }
 
     &__item:hover &__delete{
@@ -39,5 +48,13 @@
     
 }
 
+.standard-checkbox{
+    display:none;
+}
+
+.standard-checkbox:checked + .list__checkmark{
+    background-image: url(../img/checked.svg);
+
+}
 
 
