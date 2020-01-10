@@ -30,8 +30,11 @@ main{
 .paper{
     width: 80%;
     background-color: white;
-    border: solid 1px $grey-light;
-    box-shadow: 0px 3px 10px lightgray;
+    box-shadow: 0px 2px 5px 0px rgba(black, 0.2),
+                0px 18px 0px -10px white,
+                0px 20px 7px -12px rgba(black, 0.3),
+                0px 36px 0px -20px white,
+                0px 38px 7px -22px rgba(black, 0.3);
 }
 
 h1{
@@ -60,23 +63,3 @@ h1{
 
 @import "partials/counter";
 
-
-/*------Stapeleffekt------*/
-
-.effekt{
-    display: inline-block;
-    height: 7px;
-    background-color: white;
-    border: solid 1px $grey-light;
-    border-top: none;
-    box-shadow: 0px 3px 10px lightgray;
-}
-
-.stapel1{
-    width: 79%;
-
-}
-
-.stapel2{
-    width: 78%;
-}
