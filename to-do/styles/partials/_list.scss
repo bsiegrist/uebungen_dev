@@ -25,9 +25,21 @@
         padding: 10px;
     }
 
+    &__delete img{
+        width: 2.5rem;
+    }
+
+    &__checkbox input{
+        display:none;
+
+        &:checked + .list__checkmark{
+            background-image: url(../img/checked.svg);
+        }
+    }
+
     &__checkmark{
-        width: 40px;
-        height: 40px;
+        width: 2.6rem;
+        height: 2.6rem;
         background-size: contain;
         background-image: url(../img/unchecked.svg);
         background-repeat: no-repeat;
@@ -48,13 +60,6 @@
     
 }
 
-.standard-checkbox{
-    display:none;
-}
 
-.standard-checkbox:checked + .list__checkmark{
-    background-image: url(../img/checked.svg);
-
-}
 
 
