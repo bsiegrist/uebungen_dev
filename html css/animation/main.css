@@ -1,0 +1,79 @@
+*, :after {
+  box-sizing: border-box; }
+
+body {
+  background-color: #185787;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh; }
+
+.loader {
+  width: 300px;
+  height: 250px;
+  position: relative; }
+
+.pig-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 200px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #f7a99b;
+  padding-top: 10px;
+  z-index: -1; }
+
+.pig-ears {
+  display: flex;
+  justify-content: space-between; }
+
+.ear {
+  width: 85px; }
+  .ear-left {
+    margin-left: 15px;
+    transform: rotate(-45deg); }
+  .ear-right {
+    margin-right: 15px;
+    transform: rotate(45deg); }
+
+.pig-eyes {
+  display: flex;
+  justify-content: center; }
+
+.eye {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  background-color: black;
+  border-radius: 50%; }
+  .eye-glow {
+    width: 0.4em;
+    height: 0.4em;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px; }
+
+.pig-nose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+  padding-bottom: 5px;
+  border-radius: 50%;
+  background-color: #f7a99b;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+
+.nose {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  background-color: #d69488;
+  border-radius: 50%; }
