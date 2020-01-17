@@ -28,11 +28,13 @@ body{
 .veggie__img{
     width: 100px;
     height: 100px;
-    background-image: url(animation2.svg);
+    background-image: url(animation1.svg);
     background-repeat: no-repeat;
     background-size: cover;
 
-    animation: rotation 4s infinite ease-in-out reverse;
+    animation:  rotation 4s infinite ease-in-out reverse,
+                change-apple 1s steps(29) 3.8s forwards,
+                change-carrot 1s steps(29) 7.6s forwards;
 }
 
 
@@ -204,6 +206,26 @@ body{
     }
     40%{
         transform: rotate(45deg);
+    }
+}
+
+@keyframes change-apple{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -2900px;
+    }
+}
+
+@keyframes change-carrot{
+    0%{
+        background-image: url(animation2.svg);
+        background-position-x: 0;
+    }
+    100%{
+        background-image: url(animation2.svg);
+        background-position-x: -2900px;
     }
 }
 
