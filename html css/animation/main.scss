@@ -12,6 +12,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 95vh;
+
+    animation: bg-apple 4s ease-out forwards,  
+                bg-carrot 4s ease-out 4s forwards;
 }
 
 
@@ -144,6 +147,30 @@ body{
 
 
 /* Animation */
+
+@keyframes bg-apple{
+    0%{
+        background-color: #ffffb5;
+    }
+    90%{
+        background-color: #ffffb5;
+    }
+    100%{
+        background-color: #9dcff8;
+    }
+}
+
+@keyframes bg-carrot{
+    0%{
+        background-color: #9dcff8;
+    }
+    90%{
+        background-color: #9dcff8;
+    }
+    100%{
+        background-color: #caffcf;
+    }
+}
 
 @keyframes turn {
     from {
