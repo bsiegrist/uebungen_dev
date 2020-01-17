@@ -35,11 +35,21 @@ body {
 .ear {
   width: 85px; }
   .ear-left {
-    margin-left: 15px;
-    transform: rotate(-45deg); }
+    margin-left: 40px;
+    transform: rotate(-45deg);
+    transform-origin: bottom center;
+    animation-name: wiggle-left;
+    animation-duration: 3s;
+    animation-delay: 1.3s;
+    animation-iteration-count: infinite; }
   .ear-right {
-    margin-right: 15px;
-    transform: rotate(45deg); }
+    margin-right: 40px;
+    transform: rotate(45deg);
+    transform-origin: bottom center;
+    animation-name: wiggle-right;
+    animation-duration: 3s;
+    animation-delay: 1.3s;
+    animation-iteration-count: infinite; }
 
 .pig-eyes {
   display: flex;
@@ -87,3 +97,37 @@ body {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+@keyframes wiggle-left {
+  0% { }
+  12% {
+    transform: rotate(-45deg); }
+  15% {
+    transform: rotate(-30deg); }
+  20% {
+    transform: rotate(-35deg); }
+  28% {
+    transform: rotate(-32deg); }
+  30% {
+    transform: rotate(-35deg); }
+  33% {
+    transform: rotate(-28deg); }
+  40% {
+    transform: rotate(-45deg); } }
+
+@keyframes wiggle-right {
+  0% { }
+  12% {
+    transform: rotate(45deg); }
+  15% {
+    transform: rotate(30deg); }
+  20% {
+    transform: rotate(35deg); }
+  28% {
+    transform: rotate(32deg); }
+  30% {
+    transform: rotate(35deg); }
+  33% {
+    transform: rotate(28deg); }
+  40% {
+    transform: rotate(45deg); } }
