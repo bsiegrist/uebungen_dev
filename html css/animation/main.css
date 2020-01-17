@@ -8,12 +8,28 @@ body {
   align-items: center;
   height: 95vh; }
 
-.loader {
+/* VEGGIE */
+.veggie {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  animation: rotation 4s infinite ease-in-out; }
+
+.veggie__img {
+  width: 100px;
+  height: 100px;
+  background-image: url(animation2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: rotation 4s infinite ease-in-out reverse; }
+
+/* PIG */
+.pig {
   width: 300px;
   height: 250px;
-  position: relative; }
+  position: absolute; }
 
-.pig-head {
+.pig__head {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +44,7 @@ body {
   padding-top: 10px;
   z-index: -1; }
 
-.pig-ears {
+.pig__ears {
   display: flex;
   justify-content: space-between; }
 
@@ -51,7 +67,7 @@ body {
     animation-delay: 1.3s;
     animation-iteration-count: infinite; }
 
-.pig-eyes {
+.pig__eyes {
   display: flex;
   justify-content: center; }
 
@@ -62,9 +78,7 @@ body {
   margin-right: 0.7em;
   background-color: black;
   border-radius: 50%;
-  animation-name: turn;
-  animation-duration: 2s;
-  animation-iteration-count: infinite; }
+  animation: turn 4s infinite ease-in-out; }
   .eye-glow {
     width: 0.4em;
     height: 0.4em;
@@ -72,7 +86,7 @@ body {
     border-radius: 50%;
     margin: 5px; }
 
-.pig-nose {
+.pig__nose {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,3 +145,9 @@ body {
     transform: rotate(28deg); }
   40% {
     transform: rotate(45deg); } }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
