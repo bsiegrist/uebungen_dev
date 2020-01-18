@@ -179,6 +179,58 @@ body {
   40% {
     transform: rotate(45deg); } }
 
+/*
+
+@keyframes change-veggie{
+    0%{
+        background-position-x: 0;
+    }
+    24%{
+        background-position-x: 0px;
+    }
+    25%{
+        background-position-x: -2900px;
+    }
+    26%{
+        background-image: url(animation2.svg);
+        background-position-x: 0;
+    }
+    49%{
+        background-image: url(animation2.svg);
+        background-position-x: 0;
+    }
+    50%{
+        background-image: url(animation2.svg);
+        background-position-x: -2900px;
+    }
+    51%{
+        background-image: url(animation3.svg);
+        background-position-x: 0px;
+    }
+    74%{
+        background-image: url(animation3.svg);
+        background-position-x: 0px;
+    }
+    75%{
+        background-image: url(animation3.svg);
+        background-position-x: -2900px;
+    }
+    76%{
+        background-image: url(animation4.svg);
+        background-position-x: 0px;
+    }
+    99%{
+        background-image: url(animation4.svg);
+        background-position-x: 0px;
+    }
+    100%{
+        background-image: url(animation4.svg);
+        background-position-x: -2900px;
+    }
+}
+
+
+*/
 @keyframes change-apple {
   0% {
     background-position-x: 0; }
