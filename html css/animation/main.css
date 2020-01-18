@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 95vh;
-  animation: bg-apple 4s ease-out forwards,   bg-carrot 4s ease-out 4s forwards; }
+  animation: bg-apple 4s ease-out forwards,   bg-carrot 4s ease-out 4s forwards, bg-eggplant 4s ease-out 8s forwards, bg-banana 4s ease-out 12s forwards; }
 
 /* VEGGIE */
 .veggie {
@@ -22,7 +22,7 @@ body {
   background-image: url(animation1.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  animation: rotation 4s infinite ease-in-out reverse, change-apple 1s steps(29) 3.8s forwards, change-carrot 1s steps(29) 7.6s forwards; }
+  animation: rotation 4s infinite ease-in-out reverse, change-apple 1s steps(29) 3.8s forwards, change-carrot 1s steps(29) 7.8s forwards, change-eggplant 1s steps(29) 11.8s forwards, change-banana 1s steps(29) 15.8s forwards; }
 
 /* PIG */
 .pig {
@@ -123,6 +123,22 @@ body {
   100% {
     background-color: #caffcf; } }
 
+@keyframes bg-eggplant {
+  0% {
+    background-color: #caffcf; }
+  90% {
+    background-color: #caffcf; }
+  100% {
+    background-color: #ad65ff; } }
+
+@keyframes bg-banana {
+  0% {
+    background-color: #ad65ff; }
+  90% {
+    background-color: #ad65ff; }
+  100% {
+    background-color: #ffffb5; } }
+
 @keyframes turn {
   from {
     transform: rotate(0deg); }
@@ -175,6 +191,22 @@ body {
     background-position-x: 0; }
   100% {
     background-image: url(animation2.svg);
+    background-position-x: -2900px; } }
+
+@keyframes change-eggplant {
+  0% {
+    background-image: url(animation3.svg);
+    background-position-x: 0; }
+  100% {
+    background-image: url(animation3.svg);
+    background-position-x: -2900px; } }
+
+@keyframes change-banana {
+  0% {
+    background-image: url(animation4.svg);
+    background-position-x: 0; }
+  100% {
+    background-image: url(animation4.svg);
     background-position-x: -2900px; } }
 
 @keyframes rotation {
