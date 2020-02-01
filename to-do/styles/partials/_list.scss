@@ -16,35 +16,37 @@
         }
     }
 
-    &__checkbox, 
+    &__checkbox,
     &__delete{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 10%;
-        padding: 10px;
 
         img{
-            width: 2.5rem;
+            width: 2.2rem;
         }
     }
 
-    &__checkbox input{
-        display:none;
+    &__checkbox{
+        height: 2.2rem;
 
-        &:checked + .list__checkmark{
-            background-image: url(../img/checked.svg);
+        
+
+        input{
+            visibility: hidden;
+
+            &::after{
+                content: url(../img/unchecked.svg);
+                }
+
+            &:checked::after{
+                content: url(../img/checked.svg);
+                }
         }
+        
     }
 
-    &__checkmark{
-        width: 2.6rem;
-        height: 2.6rem;
-        background-size: contain;
-        background-image: url(../img/unchecked.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
 
     &__item-name{
         flex-grow: 2;
@@ -59,7 +61,3 @@
     }
     
 }
-
-
-
-
