@@ -16,33 +16,24 @@
         }
     }
 
-    &__checkbox,
-    &__delete{
+    &__checkbox{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 10%;
 
-        img{
+        ::after{
+            content: url(../img/unchecked.svg);
             width: 2.2rem;
+            height: 2.2rem;
         }
-    }
 
-    &__checkbox{
-        height: 2.2rem;
-
-        
+        input:checked + .list__checkbox::after{
+            content: url(../img/checked.svg);
+        }
 
         input{
-            visibility: hidden;
-
-            &::after{
-                content: url(../img/unchecked.svg);
-                }
-
-            &:checked::after{
-                content: url(../img/checked.svg);
-                }
+            display: none;
         }
         
     }
@@ -53,7 +44,15 @@
     }
 
     &__delete{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
         visibility: hidden;
+
+        img{
+            height: 2.2rem;
+        }
     }
 
     &__item:hover &__delete{
