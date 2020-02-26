@@ -17,23 +17,23 @@
     }
 
     &__checkbox{
+        width: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 10%;
 
-        ::after{
+        &::before{
             content: url(../img/unchecked.svg);
             width: 2.2rem;
             height: 2.2rem;
         }
 
-        input:checked + .list__checkbox::after{
+        input:checked+.list__checkbox::before{
             content: url(../img/checked.svg);
         }
 
         input{
-            display: none;
+            display: block;
         }
         
     }
