@@ -2,6 +2,8 @@ var xBtn = document.querySelectorAll('.list__delete');
 var ul = document.querySelector('.list');
 var check = document.querySelectorAll('.list__checkmark');
 var label = document.querySelectorAll('.list__checklabel');
+var arrow = document.querySelector('.input__arrow');
+var formfield = document.querySelector('.input__formfield')
 
 //x-Button für entfernen
 for (var i = 0; i < xBtn.length; i++){

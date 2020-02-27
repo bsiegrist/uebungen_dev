@@ -27,6 +27,12 @@
         }
     }
 
+    &__label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__checkmark + .list__label::before{
         content: url(../img/unchecked.svg);
         width: 2.2rem;
@@ -46,7 +52,7 @@
         align-items: center;
         width: 10%;
         visibility: hidden;
-
+        
         img{
             height: 2.2rem;
         }
