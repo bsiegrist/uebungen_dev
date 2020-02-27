@@ -20,3 +20,5 @@ for (var i = 0; i < check.length; i++){
         x.parentNode.parentNode.classList.toggle('list__item--done');
     })
 }
+
+//text eingeben und neues li erstellen

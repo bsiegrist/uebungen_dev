@@ -1,32 +1,32 @@
 .input{
-    display: flex;
-    align-items: center;
-    border: none;
+    
 
-    &__arrow{
+    &__line{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 10%;
-        
-        img{
-            width: 1.5rem;
-        }
+        height: 4rem;
+        width: 100%;
     }
 
-    &__textbox{
-        width: 90%;
+    &__arrow{
+        border: none;
+        width: 10%;
+        height: 4rem;
+        background-image: url(../img/arrow-down.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
     }
 
     &__formfield{
         border: none;
         height: 4rem;
-        width: 100%;
-    
-        &::placeholder{
-        font-style: oblique;
-        color: $grey-light;
-        }
-    }
+        width: 90%;
 
+        &::placeholder{
+            font-style: oblique;
+            color: $grey-light;
+            }
+    }
 }
