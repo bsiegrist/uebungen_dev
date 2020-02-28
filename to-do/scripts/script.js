@@ -24,3 +24,46 @@ for (var i = 0; i < check.length; i++){
 }
 
 //text eingeben und neues li erstellen
+arrow.addEventListener('click', addLi);
+
+function addLi(){
+    event.preventDefault(); 
+    console.log("yeeeeeeh");
+}
+
+
+/*
+//new LI
+var newLi = document.createElement('li');
+newLi.classList.add('list__item');
+ul.appendChild(newLi);
+
+//new Checkbox
+var newDivCheckbox = document.createElement('div');
+newDivCheckbox.classList.add('list__checkbox');
+newLi.appendChild(newDivCheckbox);
+var newCheckmark = document.createElement('input');
+newCheckmark.setAttribute('type', 'checkbox');
+newCheckmark.classList.add('list__checkmark');
+newLi.appendChild(newCheckmark);
+newCheckmark.setAttribute('id', 'XYZ');//hinzufügen individuelle ID?
+var newLabel = document.createElement('label');
+newCheckmark.setAttribute('for', 'XYZ');//hinzufügen individuelle ID?
+newCheckmark.classList.add('list__label');
+newLi.appendChild(newLabel);
+
+//new item
+var newLiItem = document.createElement('p');
+newLiItem.classList.add('list__item-name');
+newLiItem.innerText = "XYZ" //hinzufügen individueller Text
+newLi.appendChild(newLiItem);
+
+//new Delete
+var newDelete = document.createElement('div');
+newDivCheckbox.classList.add('list__delete');
+newLi.appendChild(newDelete);
+var newX = document.createElement('img');
+newX.setAttribute('src', 'img/cross.svg');
+newX.setAttribute('alt', 'delete-button');
+newDelete.appendChild(newX);
+*/
