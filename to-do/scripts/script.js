@@ -3,7 +3,8 @@ var ul = document.querySelector('.list');
 var check = document.querySelectorAll('.list__checkmark');
 var label = document.querySelectorAll('.list__checklabel');
 var arrow = document.querySelector('.input__arrow');
-var formfield = document.querySelector('.input__formfield')
+var formfield = document.querySelector('.input__formfield');
+var form = document.querySelector('.input__line');
 
 //x-Button für entfernen
 for (var i = 0; i < xBtn.length; i++){
@@ -24,11 +25,16 @@ for (var i = 0; i < check.length; i++){
 }
 
 //text eingeben und neues li erstellen
-arrow.addEventListener('click', addLi);
+form.addEventListener('submit', addLi);
 
 function addLi(){
     event.preventDefault(); 
-    console.log("yeeeeeeh");
+
+    //new LI
+    var newLi = document.createElement('li');
+    newLi.classList.add('list__item');
+    newLi.innerHTML = '<div class="list__checkbox"><input type="checkbox" class="list__checkmark" id="newID"><label class="list__label" for="newID"></label></div><p class="list__item-name">newID</p><div class="list__delete"><img src="img/cross.svg" alt="delete-button"></div>';
+    ul.appendChild(newLi);
 }
 
 
