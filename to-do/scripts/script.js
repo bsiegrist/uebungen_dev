@@ -6,7 +6,11 @@ var arrow = document.querySelector('.input__arrow');
 var formfield = document.querySelector('.input__formfield');
 var form = document.querySelector('.input__line');
 
-//x-Button für entfernen
+var listElements = [];
+
+
+//x-Button für entfernen klassischer Ansatz
+/*
 for (var i = 0; i < xBtn.length; i++){
     xBtn[i].addEventListener('click', deleteListItem);
 }
@@ -15,6 +19,15 @@ function deleteListItem(event){
     var li = event.currentTarget.parentNode;
     ul.removeChild(li);
 }
+*/
+
+//x-Button delegation-Ansatz
+ul.addEventListener('click', function(event){
+    if (event.target && event.target.matches('.list__delete img')){
+        var li = event.target.parentNode.parentNode;
+        li.parentNode.removeChild(li);
+    }
+});
 
 //Style für erledigt toggeln
 for (var i = 0; i < check.length; i++){
@@ -38,38 +51,3 @@ function addLi(){
 }
 
 
-/*
-//new LI
-var newLi = document.createElement('li');
-newLi.classList.add('list__item');
-ul.appendChild(newLi);
-
-//new Checkbox
-var newDivCheckbox = document.createElement('div');
-newDivCheckbox.classList.add('list__checkbox');
-newLi.appendChild(newDivCheckbox);
-var newCheckmark = document.createElement('input');
-newCheckmark.setAttribute('type', 'checkbox');
-newCheckmark.classList.add('list__checkmark');
-newLi.appendChild(newCheckmark);
-newCheckmark.setAttribute('id', 'XYZ');//hinzufügen individuelle ID?
-var newLabel = document.createElement('label');
-newCheckmark.setAttribute('for', 'XYZ');//hinzufügen individuelle ID?
-newCheckmark.classList.add('list__label');
-newLi.appendChild(newLabel);
-
-//new item
-var newLiItem = document.createElement('p');
-newLiItem.classList.add('list__item-name');
-newLiItem.innerText = "XYZ" //hinzufügen individueller Text
-newLi.appendChild(newLiItem);
-
-//new Delete
-var newDelete = document.createElement('div');
-newDivCheckbox.classList.add('list__delete');
-newLi.appendChild(newDelete);
-var newX = document.createElement('img');
-newX.setAttribute('src', 'img/cross.svg');
-newX.setAttribute('alt', 'delete-button');
-newDelete.appendChild(newX);
-*/
