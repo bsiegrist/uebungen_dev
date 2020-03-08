@@ -20,6 +20,7 @@ function renderList(){
         var newLi = document.createElement('li');
         newLi.innerHTML = '<div class="list__checkbox"><input type="checkbox" class="list__checkmark" id="' + i + '"><label class="list__label" for="' + i + '"></label></div><p class="list__item-name">' + list[i] + '</p><div class="list__delete"><img src="img/cross.svg" alt="delete-button"></div>';
         newLi.classList.add('list__item');
+        newLi.id = i;
         ul.appendChild(newLi);
     }
 };
@@ -47,7 +48,7 @@ ul.addEventListener('click', function(event){
     if (event.target && event.target.matches('.list__delete img')){
         var li = event.target.parentNode.parentNode;
         li.parentNode.removeChild(li);
-        var getID = event.target.parentNode.id;
+        var getID = li.id;
         list.splice(getID, 1);
         localStorage.setItem('list', JSON.stringify(list));
         renderList();
