@@ -3,16 +3,19 @@ import * as Tools from './tools.js';
 const ul = document.querySelector('.list');
 const formfield = document.querySelector('.input__formfield');
 const form = document.querySelector('.input__line');
+const counter = document.querySelector('.counter p')
+
 let list = [];
+
+
+if (localStorage.getItem('list')){
+    list = JSON.parse(localStorage.getItem('list'));
+} ;
+
 
 //create List from Local Storage
 function renderList(){
     ul.innerHTML = "";
-    if (localStorage.getItem('list')){
-        list = JSON.parse(localStorage.getItem('list'));
-    } else {
-        list = ['Milch', 'Brot'];
-    }
     list.forEach((element, index) => {
         let newLi = document.createElement('li');
         newLi.innerHTML = `<div class="list__checkbox">
@@ -27,13 +30,13 @@ function renderList(){
         newLi.id = index;
         ul.appendChild(newLi);
     })
+    counter.innerText = `${list.length} items left`;
 };
 
 //x-Button mit module delegate
 ul.addEventListener('click',Tools.delegate('.list__delete img', function(event){
-    let li = event.target.parentNode.parentNode;
-    li.parentNode.removeChild(li);
-    let getID = li.id
+    Tools.removeElement(event.target.parentNode.parentNode);
+    let getID = event.target.parentNode.parentNode.id
     list.splice(getID, 1);
     localStorage.setItem('list', JSON.stringify(list));
     renderList();
@@ -58,4 +61,3 @@ form.addEventListener('submit', function(){
 
 //Liste aufbauen lassen
 renderList();
-

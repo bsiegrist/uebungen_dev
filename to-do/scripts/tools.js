@@ -1,3 +1,7 @@
+function removeElement(x){
+    x.parentNode.removeChild(x);
+};
+
 function delegate(cssClass, myfunction){
     return function(event){
         if (event.target.matches(cssClass)){
@@ -8,4 +12,4 @@ function delegate(cssClass, myfunction){
 
 
 
-export {delegate};
+export {removeElement, delegate};
