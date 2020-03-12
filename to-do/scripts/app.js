@@ -1,3 +1,5 @@
+import * as Tools from './tools.js';
+
 const ul = document.querySelector('.list');
 const formfield = document.querySelector('.input__formfield');
 const form = document.querySelector('.input__line');
@@ -27,25 +29,21 @@ function renderList(){
     })
 };
 
-//x-Button delegation-Ansatz
-ul.addEventListener('click', function(event){
-    if (event.target && event.target.matches('.list__delete img')){
-        let li = event.target.parentNode.parentNode;
-        li.parentNode.removeChild(li);
-        let getID = li.id
-        list.splice(getID, 1);
-        localStorage.setItem('list', JSON.stringify(list));
-        renderList();
-    }
-});
+//x-Button mit module delegate
+ul.addEventListener('click',Tools.delegate('.list__delete img', function(event){
+    let li = event.target.parentNode.parentNode;
+    li.parentNode.removeChild(li);
+    let getID = li.id
+    list.splice(getID, 1);
+    localStorage.setItem('list', JSON.stringify(list));
+    renderList();
+}));
 
-//Style für erledigt toggeln mit delegate Ansatz
-ul.addEventListener('click', function(event){
-    if (event.target.matches('.list__checkbox input')){
-        let doneItem = event.target.parentNode.parentNode;
-        doneItem.classList.toggle('list__item--done');
-        }
-});
+//Style toggeln mit module delegate
+ul.addEventListener('click', Tools.delegate('.list__checkbox input', function(event){
+    let doneItem = event.target.parentNode.parentNode;
+    doneItem.classList.toggle('list__item--done');
+}));
 
 //text eingeben und neues li erstellen
 form.addEventListener('submit', function(){
