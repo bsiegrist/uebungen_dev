@@ -1,9 +1,9 @@
-function removeElement(x){
+const removeElement = (x) => {
     x.parentNode.removeChild(x);
 };
 
-function delegate(cssClass, myfunction){
-    return function(event){
+const delegate = (cssClass, myfunction) => {
+    return (event) => {
         if (event.target.matches(cssClass)){
             myfunction(event);
         };

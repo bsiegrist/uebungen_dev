@@ -22,7 +22,7 @@ function renderList(){
                               <input type="checkbox" class="list__checkmark" id=" ${element} ">
                               <label class="list__label" for=" ${element} "></label>
                            </div>
-                           <p class="list__item-name"> ${element} </p>
+                           <p class="list__item-name"> ${element.toDo} </p>
                            <div class="list__delete">
                               <img src="img/cross.svg" alt="delete-button">
                            </div>`;
@@ -34,7 +34,7 @@ function renderList(){
 };
 
 //x-Button mit module delegate
-ul.addEventListener('click',Tools.delegate('.list__delete img', function(event){
+ul.addEventListener('click',Tools.delegate('.list__delete img', (event) => {
     Tools.removeElement(event.target.parentNode.parentNode);
     let getID = event.target.parentNode.parentNode.id
     list.splice(getID, 1);
@@ -43,16 +43,16 @@ ul.addEventListener('click',Tools.delegate('.list__delete img', function(event){
 }));
 
 //Style toggeln mit module delegate
-ul.addEventListener('click', Tools.delegate('.list__checkbox input', function(event){
+ul.addEventListener('click', Tools.delegate('.list__checkbox input', (event) => {
     let doneItem = event.target.parentNode.parentNode;
     doneItem.classList.toggle('list__item--done');
 }));
 
 //text eingeben und neues li erstellen
-form.addEventListener('submit', function(){
+form.addEventListener('submit', (event) => {
     event.preventDefault(); 
     //push to list
-    list.push(formfield.value);
+    list.push({toDo: formfield.value, done: false});
     formfield.value = "";
     localStorage.setItem('list', JSON.stringify(list));
     //create new list
