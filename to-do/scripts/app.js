@@ -19,10 +19,10 @@ function renderList(){
     list.forEach((element, index) => {
         let newLi = document.createElement('li');
         newLi.innerHTML = `<div class="list__checkbox">
-                              <input type="checkbox" class="list__checkmark" id=" ${element} ">
-                              <label class="list__label" for=" ${element} "></label>
+                              <input type="checkbox" class="list__checkmark" id="${element}">
+                              <label class="list__label" for="${element}"></label>
                            </div>
-                           <p class="list__item-name"> ${element.toDo} </p>
+                           <p class="list__item-name">${element}</p>
                            <div class="list__delete">
                               <img src="img/cross.svg" alt="delete-button">
                            </div>`;
@@ -52,7 +52,7 @@ ul.addEventListener('click', Tools.delegate('.list__checkbox input', (event) => 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); 
     //push to list
-    list.push({toDo: formfield.value, done: false});
+    list.push(formfield.value);
     formfield.value = "";
     localStorage.setItem('list', JSON.stringify(list));
     //create new list
