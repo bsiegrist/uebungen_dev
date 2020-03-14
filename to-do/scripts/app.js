@@ -5,22 +5,22 @@ const formfield = document.querySelector('.input__formfield');
 const form = document.querySelector('.input__line');
 const counter = document.querySelector('.counter p')
 
-let list = [];
+let toDolist = [];
 
 
 if (localStorage.getItem('list')){
-    list = JSON.parse(localStorage.getItem('list'));
+    toDolist = JSON.parse(localStorage.getItem('list'));
 } ;
 
 
 //create List from Local Storage
 function renderList(){
     ul.innerHTML = "";
-    list.forEach((element, index) => {
+    toDolist.forEach((element, index) => {
         let newLi = document.createElement('li');
         newLi.innerHTML = `<div class="list__checkbox">
-                              <input type="checkbox" class="list__checkmark" id="${element}">
-                              <label class="list__label" for="${element}"></label>
+                              <input type="checkbox" class="list__checkmark" id="todo-${index}">
+                              <label class="list__label" for="todo-${index}"></label>
                            </div>
                            <p class="list__item-name">${element}</p>
                            <div class="list__delete">
@@ -30,15 +30,15 @@ function renderList(){
         newLi.id = index;
         ul.appendChild(newLi);
     })
-    counter.innerText = `${list.length} items left`;
+    counter.innerText = `${toDolist.length} items left`;
 };
 
 //x-Button mit module delegate
 ul.addEventListener('click',Tools.delegate('.list__delete img', (event) => {
     Tools.removeElement(event.target.parentNode.parentNode);
     let getID = event.target.parentNode.parentNode.id
-    list.splice(getID, 1);
-    localStorage.setItem('list', JSON.stringify(list));
+    toDolist.splice(getID, 1);
+    localStorage.setItem('list', JSON.stringify(toDolist));
     renderList();
 }));
 
@@ -50,11 +50,14 @@ ul.addEventListener('click', Tools.delegate('.list__checkbox input', (event) => 
 
 //text eingeben und neues li erstellen
 form.addEventListener('submit', (event) => {
+    //standard stoppen
     event.preventDefault(); 
     //push to list
-    list.push(formfield.value);
+    toDolist.push(formfield.value);
+    //formularfeld leeren
     formfield.value = "";
-    localStorage.setItem('list', JSON.stringify(list));
+    //speichern in localStorage
+    localStorage.setItem('list', JSON.stringify(toDolist));
     //create new list
     renderList();
 });
