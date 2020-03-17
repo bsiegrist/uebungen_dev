@@ -35,7 +35,8 @@ function renderList(){
         };
     })
     //counter
-    counter.innerText = `${toDolist.length} items left`;
+    let ItemDone = document.querySelectorAll('.list__item--done');
+    counter.innerText = `${(toDolist.length - ItemDone.length)} items left`;
 };
 
 //x-Button mit module delegate
