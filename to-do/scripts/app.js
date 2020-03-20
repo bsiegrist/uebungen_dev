@@ -60,6 +60,13 @@ function renderListFilter(){
     };
 };
 
+function saveList(){
+    localStorage.setItem('list', JSON.stringify(toDoList));
+    Tools.post('http://localhost:3002/todos', toDoList, function (response) {
+        console.log(response);
+    });
+};
+
 //x-Button mit module delegate
 ul.addEventListener('click',Tools.delegate('.list__delete img', (event) => {
     let getID = parseInt(event.target.parentNode.parentNode.id);  // img  >  div list delete  >  li
@@ -67,7 +74,7 @@ ul.addEventListener('click',Tools.delegate('.list__delete img', (event) => {
         return element.id === getID;
     });
     toDoList.splice(getIndex, 1);
-    localStorage.setItem('list', JSON.stringify(toDoList));
+    saveList();
     renderListFilter();
 }));
 
@@ -78,7 +85,7 @@ ul.addEventListener('click', Tools.delegate('.list__checkbox input', (event) => 
         return element.id === getID;
     });
     toDoList[getIndex].done = !toDoList[getIndex].done;
-    localStorage.setItem('list', JSON.stringify(toDoList));
+    saveList();
     renderListFilter();
 }));
 
@@ -90,8 +97,8 @@ form.addEventListener('submit', (event) => {
     toDoList.push({'todoText': formfield.value, 'done': false, 'id': Date.now()});
     //formularfeld leeren
     formfield.value = "";
-    //speichern in localStorage
-    localStorage.setItem('list', JSON.stringify(toDoList));
+    //speichern
+    saveList();
     //create new list depending on filter
     renderListFilter();
 });
