@@ -14,7 +14,8 @@ if (localStorage.getItem('list')){
     toDoList = JSON.parse(localStorage.getItem('list'));
 } else {
     Tools.get('http://localhost:3002/todos', function (response) {
-          toDoList = response;  //some Bug here. HELP!
+          toDoList = response; 
+          renderList(toDoList);
     });
 };
 
