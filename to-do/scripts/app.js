@@ -12,10 +12,13 @@ let toDoList = [];
 
 if (localStorage.getItem('list')){
     toDoList = JSON.parse(localStorage.getItem('list'));
+} else {
+    Tools.get('http://localhost:3002/todos', function (response) {
+          toDoList = response;  //some Bug here. HELP!
+    });
 };
 
 
-//create List from Local Storage
 function renderList(filteredList){
     ul.innerHTML = "";
     filteredList.forEach((element) => {
@@ -63,7 +66,6 @@ function renderListFilter(){
 function saveList(){
     localStorage.setItem('list', JSON.stringify(toDoList));
     Tools.post('http://localhost:3002/todos', toDoList, function (response) {
-        console.log(response);
     });
 };
 
@@ -132,5 +134,5 @@ filterShowDone.addEventListener('click', () => {
 })
 
 
-//Liste aufbauen lassen
+//Liste aufbauen lassen bei reload
 renderList(toDoList);
