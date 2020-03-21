@@ -13,9 +13,10 @@ let toDoList = [];
 if (localStorage.getItem('list')){
     toDoList = JSON.parse(localStorage.getItem('list'));
 } else {
-    Tools.get('http://localhost:3002/todos', function (response) {
+    Tools.getFetch('http://localhost:3002/todos', function (response) {
           toDoList = response; 
           renderList(toDoList);
+          console.log('infos from get with fetch');
     });
 };
 
@@ -66,7 +67,8 @@ function renderListFilter(){
 
 function saveList(){
     localStorage.setItem('list', JSON.stringify(toDoList));
-    Tools.post('http://localhost:3002/todos', toDoList, function (response) {
+    Tools.postFetch('http://localhost:3002/todos', toDoList, function (response) {
+        console.log('post with fetch works!');
     });
 };
 

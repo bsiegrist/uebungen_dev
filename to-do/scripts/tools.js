@@ -10,42 +10,28 @@ const delegate = (cssClass, myfunction) => {
     };
 };
 
+const getFetch = (target, getFunction) => {
+    fetch(target).then((response) => {
+        return response.json();
+    }).then((answer) => { 
+        getFunction(answer);
+      });
+  }
 
-const get = (target, getFunction) => {
-    let request = new XMLHttpRequest();
-    request.open('GET', target, true);
-
-    request.onload = function(){
-        if (request.status >= 200 && request.status < 400){
-            let giveBackJS = JSON.parse(request.responseText);
-            getFunction(giveBackJS);
-        } else {
-        console.log('Server hat einen Fehler gemeldet');
-        }
-    };
-
-    request.send();
-};
-
-
-const post = (target, todos, postFunction) => {
-    let request = new XMLHttpRequest();
-    request.open('POST', target, true);
-    request.setRequestHeader("Content-Type", "application/json");
-
-    request.onload = function() {
-        if (request.status >= 200 && request.status < 400) { 
-            let giveBackJS = JSON.parse(request.responseText);
-            postFunction(giveBackJS);
-        } else {
-        console.log('Server meldet fehler');
-        }
-    };
-
-    let requestData = JSON.stringify(todos); // Daten die übermittelt werden
-    request.send(requestData)
-};
+const postFetch = (target, todos, postFunction) => {
+    fetch(target, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(todos),
+    })
+    .then(response => response.json())
+    .then((answer) => {
+        postFunction(answer);
+    })
+    .catch(error => console.error('Error:', error));
+  };
 
 
-
-export {removeElement, delegate, post, get};
+export {removeElement, delegate, postFetch, getFetch};
