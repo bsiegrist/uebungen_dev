@@ -20,7 +20,6 @@ if (localStorage.getItem('list')){
     });
 };
 
-
 function renderList(filteredList){
     ul.innerHTML = "";
     filteredList.forEach((element) => {
