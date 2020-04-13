@@ -97,6 +97,31 @@ ul.addEventListener('click', Tools.delegate('.list__checkbox input', (event) => 
     renderListFilter();
 }));
 
+//up-Button mit module delegate
+ul.addEventListener('click',Tools.delegate('.list__sort-up', (event) => {
+    let getID = parseInt(event.target.parentNode.parentNode.id);  // img  >  div list sort  >  li
+    let getIndex = toDoList.findIndex(element => {
+        return element.id === getID;
+    });
+    let change = toDoList.splice(getIndex, 1);
+    toDoList.splice((getIndex-1), 0, change[0]);
+    saveList();
+    renderListFilter();
+}));
+
+//down-Button mit module delegate
+ul.addEventListener('click',Tools.delegate('.list__sort-down', (event) => {
+    let getID = parseInt(event.target.parentNode.parentNode.id);  // img  >  div list sort  >  li
+    let getIndex = toDoList.findIndex(element => {
+        return element.id === getID;
+    });
+    let change = toDoList.splice(getIndex, 1);
+    toDoList.splice((parseInt(getIndex)+1), 0, change[0]);
+    saveList();
+    renderListFilter();
+}));
+
+
 //text eingeben und neues li erstellen
 form.addEventListener('submit', (event) => {
     //standard stoppen
