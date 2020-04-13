@@ -29,6 +29,10 @@ function renderList(filteredList){
                               <label class="list__label" for="todo-${element.id}"></label>
                            </div>
                            <p class="list__item-name">${element.todoText}</p>
+                           <div class="list__sort">
+                              <img src="img/arrow-up.svg" alt="button up" class="list__sort-up">
+                              <img src="img/arrow-down.svg" alt="button down" class="list__sort-down">
+                           </div>
                            <div class="list__delete">
                               <img src="img/cross.svg" alt="delete-button">
                            </div>`;
