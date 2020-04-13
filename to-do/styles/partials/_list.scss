@@ -17,7 +17,7 @@
     }
 
     &__checkbox{
-        width: 15%;
+        width: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -50,7 +50,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 15%;
+        width: 5rem;
         margin-right: 1rem;
         visibility: hidden;
 
@@ -63,7 +63,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 10%;
+        width: 4rem;
         visibility: hidden;
         
         img{
