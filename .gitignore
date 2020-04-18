@@ -7,6 +7,6 @@ ehthumbs.db
 Thumbs.db
 
 backend/
-dist
+dist/
 node_modules
-app/dev
+to-do/app/dev/
